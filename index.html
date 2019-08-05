@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Hello, PAV World!</title>
+    <meta name="description" content="Hello, World! - A-Frame">
+    <script src="js/aframe.min.js"></script>
+  </head>
+  <body>
+    <a-scene light="defaultLightsEnabled: false">
+      <a-assets>
+        <a-asset-item id="escava" src="model/untitled.gltf"></a-asset-item>
+        <a-asset-item id="jc" src="model/jc.gltf"></a-asset-item>
+      </a-assets>
+
+      <a-entity light="type: ambient; intensity: 0.5; color: #ccc"></a-entity>
+
+  <a-entity light="type: directional; color: #EEE; intensity: 1" position="0 1 1"></a-entity>
+
+
+
+      <a-entity gltf-model="#jc" scale="4 4 4" position="0.2 -3 -9.5" rotation="4 0 0"></a-entity>
+
+      <a-entity gltf-model="#escava" scale="3 3 3" position="0 0.1 -4" rotation="0 -60 0" animation="property: rotation; to: 0 360 0; loop: true; dur: 20000; easing: linear"></a-entity>
+
+      <a-sky color="#ccc"></a-sky>
+    </a-scene>
+  </body>
+</html>
