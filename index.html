@@ -11,26 +11,26 @@
 
   </head>
   <body>
-    <a-scene renderer="antialias: true;">
+    <a-scene renderer="antialias: true;" shadow="type: pcfsoft; autoUpdate: true;">
       <a-assets>
         <img id="logo" src="jcoelho.jpg">
-        <a-asset-item id="escava" src="model/esqueleto_export.gltf"></a-asset-item>
+        <a-asset-item id="escava" src="model/anta.gltf"></a-asset-item>
         <a-asset-item id="vespasiano" src="model/vespasiano_export.gltf"></a-asset-item>
         <a-asset-item id="jc" src="model/jc_export.gltf"></a-asset-item>
       </a-assets>
 
 
+      <a-entity  environment="preset: forest; shadow: true;shadowSize:20;"></a-entity>
+      <a-entity light="type: ambient; intensity: 0.1; color: #ccc"></a-entity>
 
-      <a-entity  environment=" preset: forest"></a-entity>
-      <a-entity light="type: ambient; color: #aaa; intensity: 0.5;"></a-entity>
+    <a-entity light="type: directional; color: #EEE; intensity: 0.1" position="0 1 1"></a-entity>
 
 
+      <a-entity gltf-model="#jc" scale="1 1 1" position="0 0 -2" rotation="4 0 0" shadow animation-mixer></a-entity>
 
-      <a-entity gltf-model="#jc" scale="1 1 1" position="0 0 -2" rotation="4 0 0" animation-mixer></a-entity>
+      <a-entity gltf-model="#escava" scale="0.05 0.05 0.05" position="0 0 -8" rotation="0 0 0" shadow="receive: true"></a-entity>
 
-      <a-entity gltf-model="#escava" scale="1 1 1" position="1.5 0 -3" rotation="0 0 0"></a-entity>
-
-      <a-entity gltf-model="#vespasiano" scale="2 2 2" position="-3 -0.1 -3" animation="property: rotation; to: 0 360 0; loop: true; dur: 20000; easing: linear"></a-entity>
+      <a-entity gltf-model="#vespasiano" scale="2 2 2" position="5 -0.1 -3" rotation="0 -80 0" shadow="cast: true" ></a-entity>
 
       <a-image src="#logo" scale="2 2 2" position="0 2 4" rotation="0 180 0"></a-image>
 
