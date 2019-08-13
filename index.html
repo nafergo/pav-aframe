@@ -9,6 +9,7 @@
     <script src="js/aframe-environment-component.min.js"></script>
 
 
+
   </head>
   <body>
     <a-scene renderer="antialias: true;" shadow="type: pcfsoft; autoUpdate: true;">
@@ -21,14 +22,17 @@
 
       </a-assets>
 
-
       <a-entity  environment="preset: forest; shadow: true;shadowSize:20;"></a-entity>
+
+
+
       <a-entity light="type: ambient; intensity: 0.1; color: #ccc"></a-entity>
 
     <a-entity light="type: directional; color: #EEE; intensity: 0.5" position="0 1 1"></a-entity>
 
 
     <a-entity light="type: directional; color: #eee; intensity: 0.5" rotation="0 0 0" position="0 .7 -2"></a-entity>
+
 
 
       <a-entity gltf-model="#jc" scale="1 1 1" position="0 0 -2" rotation="4 0 0" shadow animation-mixer></a-entity>
