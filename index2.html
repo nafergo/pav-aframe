@@ -15,7 +15,7 @@
         <a-asset-item id="jc" src="model/jc_export.gltf"></a-asset-item>
       </a-assets>
 
-      <a-entity  environment=" preset: yavapai; shadow: true;" ></a-entity>
+      <a-entity  environment=" preset: default; shadow: true; ground: none" ></a-entity>
 
       <a-entity light="type: ambient; intensity: 0.1; color: #ccc"></a-entity>
 
@@ -23,14 +23,35 @@
 
 
 
+    <a-entity text="value: O esqueleto de Abraveses; color: #FAFAFA; width: 5; anchor: align;font: mozillavr;" position="-0.9 2 -3" scale="1.5 1.5 1.5"></a-entity>
+
+
       <a-entity gltf-model="#jc" scale="1 1 1" position="-1.2 0 -2" rotation="0 40 0" animation-mixer shadow="cast: true"></a-entity>
 
-      <a-entity gltf-model="#escava" scale="1 1 1" position="0 0 -2.5" rotation="0 0 0" shadow="cast: true"></a-entity>
+      <a-entity gltf-model="#escava" scale="1.5 1.5 1.5" position="0 -0.65 -2.5" rotation="-15 0 5" shadow="cast: true"
+
+              animation__mouseenter="property: position; to: 0 -0.4 -2.5; dur: 300; startEvents: mouseenter"
+              animation__mouseleave="property: position; to: 0 -0.65 -2.5; dur: 300; startEvents: mouseleave"
+
+      ></a-entity>
 
       <a-image src="#logo" scale="2 2 2" position="0 2 4" rotation="0 180 0"></a-image>
 
 
-      <a-sky color="#ccc"></a-sky>
+<a-plane position="-2.74482 0 -4" rotation="-90 0 0" scale="1 6 1" width="4" height="4" color="#BCBCBC" shadow="" material="" geometry=""></a-plane>
+
+<a-plane position="2.66216 0 -4" rotation="-90 0 0" scale="1 6 1" width="4" height="4" color="#BCBCBC" shadow="" material="" geometry=""></a-plane>
+
+<a-plane position="-0.20991 0 10.9696" rotation="-90 0 0" scale="0.5 6.1 1" width="4" height="4" color="#BCBCBC" shadow="" material="" geometry=""></a-plane>
+
+<a-plane position="-0.20991 0 -16.0477" rotation="-90 0 0" scale="0.5 6.1 1" width="4" height="4" color="#BCBCBC" shadow="" material="" geometry=""></a-plane>
+
+
+
+<a-camera>
+   <a-cursor color="#FAFAFA"></a-cursor>
+ </a-camera>
+
     </a-scene>
   </body>
 </html>
