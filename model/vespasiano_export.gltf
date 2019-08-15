@@ -1,6 +1,6 @@
 {
     "asset" : {
-        "generator" : "Khronos glTF Blender I/O v0.9.36",
+        "generator" : "Khronos glTF Blender I/O v0.9.47",
         "version" : "2.0"
     },
     "scene" : 0,
@@ -34,13 +34,9 @@
         {
             "doubleSided" : true,
             "name" : "Default OBJ.001",
-            "normalTexture" : {
-                "index" : 0,
-                "texCoord" : 0
-            },
             "pbrMetallicRoughness" : {
                 "baseColorTexture" : {
-                    "index" : 1,
+                    "index" : 0,
                     "texCoord" : 0
                 },
                 "metallicFactor" : 0,
@@ -67,17 +63,9 @@
     "textures" : [
         {
             "source" : 0
-        },
-        {
-            "source" : 1
         }
     ],
     "images" : [
-        {
-            "mimeType" : "image/png",
-            "name" : "nor_bake2a",
-            "uri" : "nor_bake2a.png"
-        },
         {
             "mimeType" : "image/jpeg",
             "name" : "col_bake2",
@@ -88,7 +76,7 @@
         {
             "bufferView" : 0,
             "componentType" : 5126,
-            "count" : 38497,
+            "count" : 23917,
             "max" : [
                 0.45981723070144653,
                 0.4780588150024414,
@@ -104,13 +92,13 @@
         {
             "bufferView" : 1,
             "componentType" : 5126,
-            "count" : 38497,
+            "count" : 23917,
             "type" : "VEC3"
         },
         {
             "bufferView" : 2,
             "componentType" : 5126,
-            "count" : 38497,
+            "count" : 23917,
             "type" : "VEC2"
         },
         {
@@ -123,28 +111,28 @@
     "bufferViews" : [
         {
             "buffer" : 0,
-            "byteLength" : 461964,
+            "byteLength" : 287004,
             "byteOffset" : 0
         },
         {
             "buffer" : 0,
-            "byteLength" : 461964,
-            "byteOffset" : 461964
+            "byteLength" : 287004,
+            "byteOffset" : 287004
         },
         {
             "buffer" : 0,
-            "byteLength" : 307976,
-            "byteOffset" : 923928
+            "byteLength" : 191336,
+            "byteOffset" : 574008
         },
         {
             "buffer" : 0,
             "byteLength" : 117924,
-            "byteOffset" : 1231904
+            "byteOffset" : 765344
         }
     ],
     "buffers" : [
         {
-            "byteLength" : 1349828,
+            "byteLength" : 883268,
             "uri" : "vespasiano_export.bin"
         }
     ]

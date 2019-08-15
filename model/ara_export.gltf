@@ -1,0 +1,141 @@
+{
+    "asset" : {
+        "generator" : "Khronos glTF Blender I/O v0.9.47",
+        "version" : "2.0"
+    },
+    "scene" : 0,
+    "scenes" : [
+        {
+            "name" : "Scene",
+            "nodes" : [
+                0
+            ]
+        }
+    ],
+    "nodes" : [
+        {
+            "mesh" : 0,
+            "name" : "ara_original"
+        }
+    ],
+    "materials" : [
+        {
+            "doubleSided" : true,
+            "name" : "Material",
+            "pbrMetallicRoughness" : {
+                "baseColorFactor" : [
+                    0.6999509334564209,
+                    0.6697890162467957,
+                    0.583916425704956,
+                    1
+                ],
+                "metallicFactor" : 0,
+                "roughnessFactor" : 0.8999999761581421
+            }
+        }
+    ],
+    "meshes" : [
+        {
+            "name" : "ara2.001",
+            "primitives" : [
+                {
+                    "attributes" : {
+                        "POSITION" : 0,
+                        "NORMAL" : 1,
+                        "TEXCOORD_0" : 2,
+                        "JOINTS_0" : 3,
+                        "WEIGHTS_0" : 4
+                    },
+                    "indices" : 5,
+                    "material" : 0
+                }
+            ]
+        }
+    ],
+    "accessors" : [
+        {
+            "bufferView" : 0,
+            "componentType" : 5126,
+            "count" : 56321,
+            "max" : [
+                0.29934513568878174,
+                1.001327633857727,
+                0.21184930205345154
+            ],
+            "min" : [
+                -0.13547047972679138,
+                -0.007480263710021973,
+                -0.1331193745136261
+            ],
+            "type" : "VEC3"
+        },
+        {
+            "bufferView" : 1,
+            "componentType" : 5126,
+            "count" : 56321,
+            "type" : "VEC3"
+        },
+        {
+            "bufferView" : 2,
+            "componentType" : 5126,
+            "count" : 56321,
+            "type" : "VEC2"
+        },
+        {
+            "bufferView" : 3,
+            "componentType" : 5123,
+            "count" : 56321,
+            "type" : "VEC4"
+        },
+        {
+            "bufferView" : 4,
+            "componentType" : 5126,
+            "count" : 56321,
+            "type" : "VEC4"
+        },
+        {
+            "bufferView" : 5,
+            "componentType" : 5123,
+            "count" : 336012,
+            "type" : "SCALAR"
+        }
+    ],
+    "bufferViews" : [
+        {
+            "buffer" : 0,
+            "byteLength" : 675852,
+            "byteOffset" : 0
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 675852,
+            "byteOffset" : 675852
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 450568,
+            "byteOffset" : 1351704
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 450568,
+            "byteOffset" : 1802272
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 901136,
+            "byteOffset" : 2252840
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 672024,
+            "byteOffset" : 3153976
+        }
+    ],
+    "buffers" : [
+        {
+            "byteLength" : 3826000,
+            "uri" : "ara_export.bin"
+        }
+    ]
+}

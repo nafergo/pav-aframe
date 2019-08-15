@@ -3,51 +3,80 @@
   <head>
     <meta charset="utf-8">
     <title>Hello, PAV World!</title>
-    <meta name="description" content="Hello, PAV World!">
-    <script src="js/aframe.min.js"></script>
+    <meta name="description" content="Hello, WebVR! • A-Frame">
+
+    <script src="js/092aframe.min.js"></script>
     <script src="js/aframe-extras.loaders.min.js"></script>
     <script src="js/aframe-environment-component.min.js"></script>
 
-
-
   </head>
-  <body>
-    <a-scene renderer="antialias: true;" shadow="type: pcfsoft; autoUpdate: true;">
-      <a-assets>
-        <img id="logo" src="jcoelho.jpg">
-        <a-asset-item id="escava" src="model/anta.gltf"></a-asset-item>
-        <a-asset-item id="vespasiano" src="model/vespasiano_export.gltf"></a-asset-item>
-        <a-asset-item id="jc" src="model/jc_export.gltf"></a-asset-item>
-        <a-asset-item id="ara" src="model/ara.gltf"></a-asset-item>
 
+  <body>
+    <a-scene renderer="antialias: true;">
+
+      <a-assets>
+        <img id="logo" src="img/jcoelho.jpg">
       </a-assets>
 
-      <a-entity  environment="preset: forest; shadow: true;shadowSize:20;"></a-entity>
+      <a-entity  environment="preset: tron;" ></a-entity>
 
 
 
-      <a-entity light="type: ambient; intensity: 0.1; color: #ccc"></a-entity>
+      <!-- CURSOR ENTITY -->
+      <a-entity position="0 1.6 0">
+        <a-entity
+          id="camera"
+          camera
+          look-controls
+          rotation="0 0 0"
+          wasd-controls
+        >
+          <!-- MAIN CURSOR -->
+          <a-entity
+            cursor="fuse: true; maxDistance: 500; timeout: 3000;"
+            id="cursor-main"
+            position="0 0 -2"
+            geometry="primitive: ring; radiusOuter: 0.06; radiusInner: 0.03; thetaLength: 360; thetaStart: 90;"
+            material="color: #f00;"
+          >
+            <a-animation begin="cursor-fusing" attribute="geometry.thetaLength" fill="forwards" from="360" to="0" easing="ease-in"></a-animation>
+            <a-animation begin="mouseleave" attribute="geometry.thetaLength" fill="backwards" from="0" to="360" dur="0"></a-animation>
+          </a-entity>
+          <a-entity
+            id="cursor-loader"
+            position="0 0 -2.0001"
+            geometry="primitive: ring; radiusOuter: 0.06; radiusInner: 0.03;"
+            material="color: #2ADD2A;"
+          >
+          </a-entity>
+        </a-entity>
+      </a-entity>
 
-    <a-entity light="type: directional; color: #EEE; intensity: 0.5" position="0 1 1"></a-entity>
+
+        <a-entity link="href: index2.html; title: My Homepage;">
+          <a-image src="#logo" scale="2 2 2" position="-3 3 -5" rotation="0 0 0"
+          animation__mouseenter="property: scale; to: 3 3 3; dur: 300; startEvents: mouseenter"
+          animation__mouseleave="property: scale; to: 2 2 2; dur: 300; startEvents: mouseleave"
+          ></a-image>
+        </a-entity>
+
+        <a-entity link="href: index3.html; title: My Homepage;">
+          <a-image src="#logo" scale="2 2 2" position="0 3 -5" rotation="0 0 0"
+          animation__mouseenter="property: scale; to: 3 3 3; dur: 300; startEvents: mouseenter"
+          animation__mouseleave="property: scale; to: 2 2 2; dur: 300; startEvents: mouseleave"
+          ></a-image>
+        </a-entity>
+
+        <a-entity link="href: index4.html; title: My Homepage;">
+          <a-image src="#logo" scale="2 2 2" position="3 3 -5" rotation="0 0 0"
+          animation__mouseenter="property: scale; to: 3 3 3; dur: 300; startEvents: mouseenter"
+          animation__mouseleave="property: scale; to: 2 2 2; dur: 300; startEvents: mouseleave"
+          ></a-image>
+        </a-entity>
 
 
-    <a-entity light="type: directional; color: #eee; intensity: 0.5" rotation="0 0 0" position="0 .7 -2"></a-entity>
 
-
-
-      <a-entity gltf-model="#jc" scale="1 1 1" position="0 0 -2" rotation="4 0 0" shadow animation-mixer></a-entity>
-
-      <a-entity gltf-model="#ara" scale="0.2 0.2 0.2" position="0 -0.1 4" rotation="0 180 0" shadow></a-entity>
-
-      <a-entity gltf-model="#escava" scale="0.05 0.05 0.05" position="0 0 -8" rotation="0 0 0" shadow="receive: true"></a-entity>
-
-      <a-entity gltf-model="#vespasiano" scale="2 2 2" position="5 -0.1 -3" rotation="0 -80 0" shadow="cast: true" ></a-entity>
-
-      <a-image src="#logo" scale="2 2 2" position="-5 2 1.5" rotation="0 90 0"></a-image>
-
-
-
-
+      <a-sky color="#000"></a-sky>
     </a-scene>
   </body>
 </html>
