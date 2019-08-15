@@ -7,13 +7,27 @@
     <script src="js/aframe.min.js"></script>
     <script src="js/aframe-extras.loaders.min.js"></script>
     <script src="js/aframe-environment-component.min.js"></script>
-    <script src="js/texto.js"></script>  </head>
+    <script src="js/texto.js"></script>
+
+
+
+    <!-- Bootstrap Bootswatch theme CSS - other themes available here: https://bootswatch.com -->
+    <link rel="stylesheet" href="https://cdn.rawgit.com/thomaspark/bootswatch/gh-pages/slate/bootstrap.min.css" />
+
+    <!-- Bootstrap JS Dependencies -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js" integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+    <!-- A-Frame JS Dependencies -->
+    <script src="https://cdn.rawgit.com/gladeye/aframe-preloader-component/1.0.2/dist/aframe-preloader-component.min.js"></script>
+
+
   </head>
   <body>
 
 
 
-    <a-scene renderer="antialias: true;" shadow="type: pcfsoft; autoUpdate: true;">
+    <a-scene preloader renderer="antialias: true;" shadow="type: pcfsoft; autoUpdate: true;">
 
       <a-assets>
         <img id="logo" src="img/jcoelho.jpg">
