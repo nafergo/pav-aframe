@@ -6,19 +6,9 @@
     <meta name="description" content="Hello, PAV World!">
     <script src="js/aframe.min.js"></script>
     <script src="js/aframe-extras.loaders.min.js"></script>
-    <script src="js/aframe-environment-component.min.js"></script>
-    <script src="js/texto.js"></script>
 
 
-
-    <!-- Bootstrap Bootswatch theme CSS - other themes available here: https://bootswatch.com -->
-    <link rel="stylesheet" href="https://cdn.rawgit.com/thomaspark/bootswatch/gh-pages/slate/bootstrap.min.css" />
-
-    <!-- Bootstrap JS Dependencies -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js" integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-
-    <!-- A-Frame JS Dependencies -->
+<!-- A-Frame JS Dependencies -->
     <script src="https://cdn.rawgit.com/gladeye/aframe-preloader-component/1.0.2/dist/aframe-preloader-component.min.js"></script>
 
 
@@ -31,12 +21,12 @@
 
       <a-assets>
         <img id="logo" src="img/jcoelho.jpg">
-        <a-asset-item id="se" src="model/se_2.gltf"></a-asset-item>
+
         <img id="sky" src="forest.jpg">
       </a-assets>
 
 
-      <a-entity  environment="preset: default; shadow: true; fog: 0.0; horizonColor:  #000; skyType: none;" ></a-entity>
+      <a-entity  environment ></a-entity>
 
 
 
@@ -58,27 +48,10 @@
 
 
 
-            <a-text class="sign"  show-history position="-5 2 -2" rotation="0 0 0" value="Look here to know its history" align="center">
-              <a-plane color="#000" width="5"></a-plane>
-            </a-text>
-
-            <a-text class="history" visible="false"  position="10 4 -5"  value="" align="center">
-              <a-plane color="#000" width="6" height="6.5" position="0 0 -.1" basic-material>
-                <a-text go-forward-history visible="false" value="Next" align="center" position="2 -2.8 .2" width="5">
-                  <a-plane color="#F44336" width=".8" height=".5" basic-material>
-                </a-text>
-                <a-text hide-history value="Exit" align="center" position="0 -2.8 .2" width="5">
-                  <a-plane color="#F44336" width=".8" height=".5" basic-material>
-                </a-text>
-                <a-text go-backward-history visible="false" value="Prev" align="center" position="-2 -2.8 .2" width="5">
-                  <a-plane color="#F44336" width=".8" height=".5" basic-material>
-                </a-text>
-              </a-plane>
-            </a-text>
 
 
             <a-entity link="href: index.html; title: My Homepage;">
-              <a-image src="#logo" scale="2 2 2" position="0 3 5" rotation="0 180 0"
+              <a-image src="#logo" scale="2 2 2" position="0 3 15" rotation="0 180 0"
               animation__mouseenter="property: scale; to: 3 3 3; dur: 300; startEvents: mouseenter"
               animation__mouseleave="property: scale; to: 2 2 2; dur: 300; startEvents: mouseleave"
               ></a-image>

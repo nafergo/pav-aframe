@@ -17,8 +17,6 @@
         <img id="logo" src="img/jcoelho.jpg">
         <a-asset-item id="vespasiano" src="model/vespasiano_export.gltf"></a-asset-item>
         <a-asset-item id="ara" src="model/ara_export.gltf"></a-asset-item>
-        <a-asset-item id="jc" src="model/jc_export.gltf"></a-asset-item>
-
       </a-assets>
 
       <!-- CURSOR ENTITY -->
@@ -52,7 +50,7 @@
       </a-entity>
 
 
-      <a-entity  environment="preset: forest; shadow: true;"></a-entity>
+      <a-entity  environment="preset: default; shadow: true;"></a-entity>
 
 
 
@@ -65,9 +63,7 @@
 
 
 
-      <a-entity gltf-model="#jc" scale="1 1 1" position="3 0 0" rotation="0 -95 0" shadow animation-mixer></a-entity>
-
-      <a-entity gltf-model="#ara" scale="1 1 1" position="5 0 3" rotation="0 -90 0" shadow="receive: false"
+      <a-entity gltf-model="#ara" scale="1 1 1" position="3 0 2" rotation="0 -90 0" shadow="receive: false"
 
       animation__mouseenter="property: scale; to: 3 3 3; dur: 300; startEvents: mouseenter"
       animation__mouseleave="property: scale; to: 1 1 1; dur: 300; startEvents: mouseleave"
